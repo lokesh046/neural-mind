@@ -1,0 +1,11 @@
+# Root environment
+venv/
+.env
+
+# Root database
+*.db
+tensortonic.db
+
+# IDEs
+.vscode/
+.idea/

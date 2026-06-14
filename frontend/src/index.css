@@ -1,0 +1,89 @@
+@import 'katex/dist/katex.min.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: #020617;
+  color: #f8fafc;
+  font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism panels */
+.glass-card {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(15, 23, 42, 0.65);
+  border-color: rgba(16, 185, 129, 0.2);
+  box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.05), inset 0 1px 0 0 rgba(255, 255, 255, 0.02);
+  transform: translateY(-2px);
+}
+
+/* Smooth transitions */
+.fade-in-up {
+  animation: fadeInUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Custom styles for Monaco Editor */
+.monaco-editor {
+  padding-top: 8px;
+}
+
+/* Katex custom overrides for dark mode */
+.katex-display {
+  background-color: rgba(31, 41, 55, 0.3);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(75, 85, 99, 0.2);
+  overflow-x: auto;
+}
+
+/* Custom SplitPane handle animations */
+.split-pane-resizer {
+  transition: background-color 0.2s;
+}
