@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.database import Base, engine
+from app.config import settings
 from app.routers import auth, problems, submissions
 
 # Auto-create tables on startup (as a fallback or in-development helper)
@@ -16,11 +17,13 @@ app = FastAPI(
 )
 
 # Configure CORS
-# Allow frontend development server at localhost:5173
+# Allow frontend development server and production FRONTEND_URL
 origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
+if settings.FRONTEND_URL and settings.FRONTEND_URL not in origins:
+    origins.append(settings.FRONTEND_URL)
 
 app.add_middleware(
     CORSMiddleware,

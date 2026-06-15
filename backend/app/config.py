@@ -6,6 +6,7 @@ class Settings(BaseSettings):
     SECRET_KEY: str = "supersecretjwtkeyforlocaldevelopmentonly12345"
     JWT_ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440
+    FRONTEND_URL: str = "http://localhost:5173"
     
     # Judge0 Settings (can be empty to use local subprocess fallback)
     JUDGE0_URL: str = ""
