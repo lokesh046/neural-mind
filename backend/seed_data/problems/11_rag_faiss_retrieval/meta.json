@@ -1,0 +1,9 @@
+{
+    "title": "RAG: FAISS Vector Database Retrieval",
+    "difficulty": "Medium",
+    "tags": [
+        "RAG",
+        "Vector Search",
+        "FAISS"
+    ]
+}

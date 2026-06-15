@@ -11,11 +11,11 @@ if "postgresql" in db_url:
         db_url = db_url.replace("postgres://", "postgresql://", 1)
     try:
         # Check connection
-        engine = create_engine(db_url, connect_timeout=3)
+        engine = create_engine(db_url, connect_args={"connect_timeout": 15})
         conn = engine.connect()
         conn.close()
-    except Exception:
-        print("PostgreSQL connection failed. Falling back to local SQLite database.")
+    except Exception as e:
+        print(f"PostgreSQL connection failed: {e}. Falling back to local SQLite database.")
         import os
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         db_path = os.path.join(base_dir, "tensortonic.db")

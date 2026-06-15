@@ -1,0 +1,9 @@
+{
+    "title": "RAG: Semantic Embeddings (SentenceTransformer)",
+    "difficulty": "Medium",
+    "tags": [
+        "RAG",
+        "Vector Embeddings",
+        "NLP"
+    ]
+}

@@ -1,0 +1,30 @@
+[
+    {
+        "input": {
+            "text": "abcdefghij",
+            "chunk_size": 4,
+            "overlap": 2
+        },
+        "output": [
+            "abcd",
+            "cdef",
+            "efgh",
+            "ghij",
+            "ij"
+        ],
+        "is_public": true
+    },
+    {
+        "input": {
+            "text": "Hello World",
+            "chunk_size": 5,
+            "overlap": 0
+        },
+        "output": [
+            "Hello",
+            " Worl",
+            "d"
+        ],
+        "is_public": false
+    }
+]

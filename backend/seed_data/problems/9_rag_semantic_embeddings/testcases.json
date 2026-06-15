@@ -1,0 +1,28 @@
+[
+    {
+        "input": {
+            "chunks": [
+                "hello",
+                "world"
+            ],
+            "query": "hi"
+        },
+        "output": {
+            "query_embedding": [
+                0.5,
+                0.6
+            ],
+            "chunk_embeddings": [
+                [
+                    0.1,
+                    0.2
+                ],
+                [
+                    0.3,
+                    0.4
+                ]
+            ]
+        },
+        "is_public": true
+    }
+]
